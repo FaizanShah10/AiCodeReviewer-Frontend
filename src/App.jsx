@@ -65,7 +65,7 @@ const App = () => {
 
         {/* Right Section */}
         <div className="lg:w-1/2 md:w-1/2 w-full h-full lg:p-6 p-2 flex justify-center items-center">
-          <div className="w-full h-full bg-zinc-800 rounded-2xl p-6 shadow-lg overflow-auto max-h-[100vh]">
+          <div className="w-full h-full bg-zinc-800 rounded-2xl p-6 shadow-lg overflow-auto max-h-[45vh]">
             {loading ? (
               <LoadingSpinner />
             ) : (
