@@ -13,7 +13,7 @@ const App = () => {
   async function reviewCode() {
     setLoading(true);
     try {
-      const response = await axios.post('https://genie-codereviewer.vercel.app/ai/get-response', { code }, {
+      const response = await axios.post('http://localhost:5000/ai/get-response', { code }, {
         withCredentials: true,
       });
       setReview(response.data);
@@ -67,7 +67,7 @@ const App = () => {
 
         {/* Right Section */}
         <div className="lg:w-1/2 md:w-1/2 w-full h-full lg:p-6 p-2 flex justify-center items-center">
-          <div className="w-full h-full bg-zinc-800 rounded-2xl p-6 shadow-lg overflow-auto lg:max-h-[100vh] md:max-h-[100vh] max-h-[45vh]">
+          <div className="w-full h-full bg-zinc-800 rounded-2xl p-6 shadow-lg overflow-auto lg:max-h-[85vh] md:max-h-[85vh]  max-h-[45vh]">
             {loading ? (
               <LoadingSpinner />
             ) : (
