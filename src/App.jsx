@@ -30,14 +30,14 @@ const App = () => {
       {/* ✅ Main Content */}
       <div className="flex lg:flex-row md:flex-row flex-col flex-grow">
         {/* Left Section */}
-        <div className="lg:w-1/2 md:w-1/2 w-full h-full flex flex-col gap-6 justify-center items-center p-4" id="code">
-          <h4 className="text-white font-[helvetica]">
-            Hello, I am here to help you with your query! 🚀
-          </h4>
-          <div className="w-[90%] min-h-[10vh] max-h-[50vh] bg-zinc-800 rounded-2xl shadow-lg p-3 flex flex-col relative overflow-y-auto">
+        <div className="lg:w-1/2 md:w-1/2 w-full h-full flex flex-col gap-6 justify-center items-center lg:p-4 p-0" id="code">
+          <div className="text-white font-[helvetica] text-center px-4 lg:text-xl text-md">
+            Hello, I am here to help you with your code! 🚀
+          </div>
+          <div className="w-[90%] min-h-[10vh] lg:max-h-[50vh] md:max-h-[50vh] max-h-[30vh] bg-zinc-800 rounded-2xl shadow-lg p-3 flex flex-col relative overflow-y-auto">
             <textarea
               placeholder="Message CodeGenie"
-              className="w-full bg-transparent text-md outline-none text-gray-800 text-white resize-none overflow-auto font-[helvetica]"
+              className="w-full bg-transparent text-md outline-none  text-white resize-none overflow-auto font-[helvetica]"
               rows="1"
               onInput={(e) => {
                 e.target.style.height = "auto";
@@ -56,7 +56,7 @@ const App = () => {
                 reviewCode();
                 setCode('');
               }}
-              className="absolute font-[helvetica] bottom-2 right-3 bg-white text-black px-4 py-2 rounded-pill shadow-lg flex items-center justify-center"
+              className="absolute font-[helvetica] bottom-2 right-3 bg-white text-black lg:px-4 lg:py-2 px-3 py-1 rounded-pill shadow-lg flex items-center justify-center"
             >
               Review
             </button>
@@ -64,7 +64,7 @@ const App = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-1/2 h-full p-6 flex justify-center items-center">
+        <div className="lg:w-1/2 md:w-1/2 w-full h-full lg:p-6 p-2 flex justify-center items-center">
           <div className="w-full h-full bg-zinc-800 rounded-2xl p-6 shadow-lg overflow-auto max-h-[100vh]">
             {loading ? (
               <LoadingSpinner />
